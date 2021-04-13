@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.get('/about', (req, res) => {
+app.get('/homepage', (req, res) => {
     res.send('This is the Home page')
 })
 
