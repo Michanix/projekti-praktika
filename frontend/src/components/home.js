@@ -11,6 +11,7 @@ export default class Home extends React.Component{
 
     componentDidMount(){
     axios.get('http://localhost:3000/homepage').then(res => {
+        console.log(res.data)
         this.setState({
             message: res.data
 
