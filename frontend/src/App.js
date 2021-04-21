@@ -12,8 +12,6 @@ function App() {
       <Header />
       <Main></Main>
       <Footer></Footer>
-      
-      
     </div>
   );
 } export default App;
