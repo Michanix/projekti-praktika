@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from 'axios'
-import Header from './header';
-import Main from './main';
-import Footer from './footer'; 
+import Header from '../Header';
+import Main from '../mainHome';
+import Footer from '../Footer'; 
 
 
 export default class Home extends React.Component { 

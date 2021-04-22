@@ -6,64 +6,9 @@ class Footer extends Component{
             <footer class="site-footer">
 				<div class="container">
 				<div class="row">
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">About Us</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Recent Review</h3>
-								<ul class="no-bullet">
-									<li><a href="https://www.google.com">Lorem ipsum dolor</a></li>
-									<li><a href="https://www.google.com">Sit amet consecture</a></li>
-									<li><a href="https://www.google.com">Dolorem respequem</a></li>
-									<li><a href="https://www.google.com">Invenore veritae</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Help Center</h3>
-								<ul class="no-bullet">
-									<li><a href="https://www.google.com">Lorem ipsum dolor</a></li>
-									<li><a href="https://www.google.com">Sit amet consecture</a></li>
-									<li><a href="https://www.google.com">Dolorem respequem</a></li>
-									<li><a href="https://www.google.com">Invenore veritae</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Join Us</h3>
-								<ul class="no-bullet">
-									<li><a href="https://www.google.com">Lorem ipsum dolor</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Social Media</h3>
-								<ul class="no-bullet">
-									<li><a href="https://www.facebook.com">Facebook</a></li>
-									<li><a href="https://twitter.com">Twitter</a></li>
-									<li><a href="https://www.instagram.com">Instagram</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Newsletter</h3>
-								<form action="#" class="subscribe-form">
-									<input type="text" placeholder="Email Address"/>
-								</form>
-							</div>
-						</div>
-					</div> 
-
-					<div class="colophon">Copyright 2014 Company name, Designed by Themezy. All rights reserved</div>
+						<div class="colophon">Copyright 2014 Project practise, Designed by Themezy. All rights reserved.</div>
 				</div> 
+				</div>
             </footer>
        
 
