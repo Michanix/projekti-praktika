@@ -29,10 +29,7 @@ function Main() {
 									<figure class="team-image"><img src={Mihailimage} alt="Mihhail" /></figure>
 									<h2 class="team-name">Mihhail Matišinets</h2>
 									<small class="team-title">Product owner</small>
-									<div class="social-links">
-										<a href="https://www.facebook.com/profile.php?id=100004693838879" class="facebook"><i class="fa fa-facebook"></i></a>
 								
-									</div>
 								</div>
 							</div>
 							<div class="col-md-3">
@@ -40,10 +37,7 @@ function Main() {
 									<figure class="team-image"><img src={Dmitriimage} alt="Dmitri" /></figure>
 									<h2 class="team-name">Dmitri Petšurov</h2>
 									<small class="team-title">Back-end developer</small>
-									<div class="social-links">
-										<a href="https://www.facebook.com/profile.php?id=100004693838879" class="facebook"><i class="fa fa-facebook"></i></a>
-										
-									</div>
+								
 								</div>
 							</div>
 							<div class="col-md-3">
@@ -51,10 +45,8 @@ function Main() {
 									<figure class="team-image"><img src={Valeriaimage} alt="Valeria"/></figure>
 									<h2 class="team-name">Valeria Nikitina</h2>
 									<small class="team-title">Front-end developer</small>
-									<div class="social-links">
-										<a href="https://www.facebook.com/profile.php?id=100004693838879" class="facebook"><i class="fa fa-facebook"></i></a>
-										
-									</div>
+									
+									
 								</div>
 							</div>
 							<div class="col-md-3">
@@ -62,10 +54,7 @@ function Main() {
 									<figure class="team-image"><img src={Maximage} alt="Max"/></figure>
 									<h2 class="team-name">Max Petuhhov</h2>
 									<small class="team-title">SCRUM-Master</small>
-									<div class="social-links">
-										<a href="https://www.facebook.com/profile.php?id=100004693838879" class="facebook"><i class="fa fa-facebook"></i></a>
-										
-									</div>
+									
 								</div>
 							</div>
 							
