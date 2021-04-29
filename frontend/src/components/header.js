@@ -21,13 +21,14 @@ class Header extends Component{
 						<ul class="menu">
 							<li class="menu-item"><a href="index.html">Home</a></li>
 							<li class="menu-item"><a href="about.html">About</a></li>
-							<li class="menu-item"><a href="review.html">Books</a></li>
+							<li class="menu-item current-menu-item"><a href="review.html">Books</a></li>
+							<li></li>
 						</ul> 
-						
-						
 
 						
-					</div> 
+						
+					</div>
+
 					<div class="mobile-navigation"></div>
 				</div>
 			</header> )
