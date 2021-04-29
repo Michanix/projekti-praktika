@@ -1,6 +1,7 @@
 import About from "./components/pages/About";
+import Books from "./components/pages/Books";
 import Home from "./components/pages/Home";
-import { ABOUT_ROUTE, HOMEPAGE_ROUTE } from "./utils/consts";
+import { ABOUT_ROUTE, HOMEPAGE_ROUTE,BOOKS_ROUTE } from "./utils/consts";
 
 export const publicRoutes = [
     {
@@ -10,7 +11,9 @@ export const publicRoutes = [
     }, {
         path:  ABOUT_ROUTE,
         Component: About
+    }, {
+        path:  BOOKS_ROUTE,
+        Component: Books
 
     }
-    
 ]

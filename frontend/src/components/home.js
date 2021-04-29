@@ -9,7 +9,9 @@ export default class Home extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            message: ''
+            message: '',
+            title: ''
+
         }
     }
 
@@ -20,6 +22,16 @@ export default class Home extends React.Component {
             message: res.data
         })
     })}
+
+    onClick(event){
+        const value = event.target.value;
+        const url = 'http://localhost:3000/api/books/search?q=${value}'
+        axios.get(url).then(res => {
+            this.setState(
+                {title: res.data.title}
+            )
+        })
+    }
 
     render(){
         return(
