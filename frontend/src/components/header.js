@@ -12,10 +12,6 @@ class Header extends Component{
 							<small class="site-description">For your bookworm needs</small>
 						</div>
 					</a>
-
-					
-
-
 					<div class="main-navigation">
 						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
@@ -23,14 +19,12 @@ class Header extends Component{
 							<li class="menu-item"><a href="about.html">About</a></li>
 							<li class="menu-item current-menu-item"><a href="review.html">Books</a></li>
 							<li></li>
-						</ul> 
-
-						
-						
+						</ul> 						
 					</div>
-
 					<div class="mobile-navigation"></div>
 				</div>
 			</header> )
     }
-} export default Header;
+} 
+export default Header;
+          

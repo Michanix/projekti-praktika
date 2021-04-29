@@ -11,12 +11,9 @@ export const publicRoutes = [
     }, {
         path:  ABOUT_ROUTE,
         Component: About
-
     }, {
         path:  BOOKS_ROUTE,
         Component: Books
 
     }
-    
-    
 ]
