@@ -7,6 +7,8 @@ import Maximage from '../dummy/max.jpg';
 
 
 function Main() {
+
+	
     return (
         <main class="main-content">
 				<div class="container">

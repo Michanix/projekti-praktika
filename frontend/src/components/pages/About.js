@@ -14,7 +14,7 @@ export default class About extends React.Component {
     }
 
     componentDidMount(){
-    axios.get('http://localhost:3000/books').then(res => {
+    axios.get('http://localhost:3000/about').then(res => {
         console.log(res.data)
         this.setState({
             message: res.data

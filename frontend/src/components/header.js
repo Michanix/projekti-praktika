@@ -1,6 +1,7 @@
 import React, {Component } from 'react';
 
 class Header extends Component{
+
     render() {
         return(
             <header class="site-header">
@@ -13,20 +14,16 @@ class Header extends Component{
 						</div>
 					</a>
 
-					
-
-
 					<div class="main-navigation">
-						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<button  type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item"><a href="index.html">Home</a></li>
-							<li class="menu-item"><a href="about.html">About</a></li>
-							<li class="menu-item current-menu-item"><a href="review.html">Books</a></li>
+							<li class="menu-item"><a href='/homepage' >Home</a></li>
+							<li class="menu-item"><a href='/about' >About</a></li>
+							<li class="menu-item" ><a href='/books'>Books</a></li>
 							<li></li>
 						</ul> 
 
-						
-						
+					
 					</div>
 
 					<div class="mobile-navigation"></div>

@@ -1,11 +1,11 @@
 import React from 'react'
 import axios from 'axios'
 import Header from '../Header';
-import Main from '../mainBooks';
+import Main from '../mainBookpage';
 import Footer from '../Footer'; 
 
 
-export default class Books extends React.Component { 
+export default class Bookpage extends React.Component { 
     constructor(props){
         super(props);
         this.state = {
@@ -14,7 +14,7 @@ export default class Books extends React.Component {
     }
 
     componentDidMount(){
-    axios.get('http://localhost:3000/books').then(res => {
+    axios.get('http://localhost:3000/bookpage').then(res => {
         console.log(res.data)
         this.setState({
             message: res.data
