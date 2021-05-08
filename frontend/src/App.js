@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import './App.css';
-import Header from './components/Header.js';
+import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/pages/About';
 import Books from './components/pages/Books';
