@@ -1,21 +1,40 @@
 /* eslint-disable no-unused-vars */
-
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import {BrowserRouter} from 'react-router-dom';
-import AppRouter from './components/AppRouter';
+import Header from './components/Header.js';
+import Home from './components/Home';
+import About from './components/pages/About';
+import Books from './components/pages/Books';
+import Book from './components/pages/Book';
+import {
+  Switch,
+  Route
+} from "react-router-dom";
 
-function App() {
-
-  
+export default function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-      <AppRouter />
-      </BrowserRouter>
-
+      	<Switch>
+          <Route exact path="/">
+            <div className="App-box content">
+              <Home />
+            </div>
+          </Route>
+          <Route path="/about">
+            <div className="App-box content">
+              <About />
+            </div>
+          </Route>
+          <Route path="/books">
+            <div className="App-box content">
+              <Books />
+            </div>
+          </Route>
+          <Route path="/:id" children={<Book />}/>
+		  </Switch>
+      <div className="App-box header">
+        <Header/>
+      </div>
     </div>
   );
-} 
-
-export default App;
+};
