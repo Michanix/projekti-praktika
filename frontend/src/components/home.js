@@ -21,6 +21,16 @@ export default class Home extends React.Component {
         })
     }
 
+    onClick(event){
+        const value = event.target.value;
+        const url = 'http://localhost:3000/api/books/search?q=${value}'
+        axios.get(url).then(res => {
+            this.setState(
+                {title: res.data.title}
+            )
+        })
+    }
+
     render(){
         const {books} = this.state;
 
