@@ -1,22 +1,19 @@
 /* eslint-disable no-undef */
-var express = require('express')
-var router = express.Router()
-var books2 = require('google-books-search');
-
-
-
+const express = require('express')
+const router = express.Router()
+const books = require('google-books-search');
 
 router.get('/books', (req, res) => {
-
-    var options = {
-        field: 'title',
+    const options = {
+        // field: 'title',
         offset: 0,
-        limit: 4,
+        limit: 9,
         type: 'books',
         order: 'relevance',
         lang: 'en'
     };
-    books2.search('programming', options, function(error, results) {
+
+    books.search('programming', options, (error, results) => {
         if ( ! error ) {
             res.send(results)
             console.log(results);
@@ -27,8 +24,7 @@ router.get('/books', (req, res) => {
 })
 
 router.get('/books/search/:value', (req, res) => {
-    
-    var options = {
+    const options = {
         field: 'title',
         offset: 0,
         limit: 8,
@@ -36,7 +32,8 @@ router.get('/books/search/:value', (req, res) => {
         order: 'relevance',
         lang: 'en'
     };
-    books2.search(req.params.value, options, function(error, results) {
+
+    books.search(req.params.value, options, (error, results) => {
         if ( ! error ) {
             res.send(results)
             console.log(results);
@@ -46,9 +43,8 @@ router.get('/books/search/:value', (req, res) => {
     });
 })
 
-router.get('/bookpage/search/:value', (req, res) => {
-    
-    var options = {
+router.get('/books/lookup/:value', (req, res) => {
+    const options = {
         field: 'title',
         offset: 0,
         limit: 4,
@@ -56,7 +52,8 @@ router.get('/bookpage/search/:value', (req, res) => {
         order: 'relevance',
         lang: 'en'
     };
-    books2.lookup(req.params.value, options, function(error, results) {
+    
+    books.lookup(req.params.value, options, (error, results) => {
         if ( ! error ) {
             res.send(results)
             console.log(results);
@@ -65,8 +62,6 @@ router.get('/bookpage/search/:value', (req, res) => {
         }
     });
 })
-
-//router.get('/books/', (req, res) => res.send('Got a GET request at /api/books/'))
 
 router.get('/books/:category/', (req, res) => res.send(`${req.params.category}`))
 

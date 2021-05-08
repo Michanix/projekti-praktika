@@ -1,33 +1,31 @@
-import React, {Component } from 'react';
+import React from 'react';
+import '../css/header.css';
+import {Link} from "react-router-dom";
 
-class Header extends Component{
-
-    render() {
-        return(
-            <header class="site-header">
-				<div class="container">
-					<a href="index.html" id="branding">
-						<img src="images/logo2.png" alt="" class="logo"></img>
-						<div class="logo-copy">
-							<h1 class="site-title">Knigopoisk</h1>
-							<small class="site-description">For your bookworm needs</small>
-						</div>
-					</a>
-
-					<div class="main-navigation">
-						<button  type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
-						<ul class="menu">
-							<li class="menu-item"><a href='/homepage' >Home</a></li>
-							<li class="menu-item"><a href='/about' >About</a></li>
-							<li class="menu-item" ><a href='/books'>Books</a></li>
-							<li></li>
-						</ul> 
-
-					
-					</div>
-
-					<div class="mobile-navigation"></div>
+export default function Header() {
+    return(
+		<div>
+		  <ul>
+			<li>
+			  <Link to="/">
+				<img src="images/logo2.png" alt="" class="logo"/>
+				<div>
+					<h1>Knigopoisk</h1>
+					<small>For your bookworm needs</small>
 				</div>
-			</header> )
-    }
-} export default Header;
+			  </Link>
+			</li>
+			<li>
+			  <Link to="/">Home</Link>
+			</li>
+			<li>
+			  <Link to="/about">About</Link>
+			</li>
+			<li>
+				<Link to="/books">Books</Link>
+			</li>
+		  </ul>
+		  <hr />
+		</div>
+	)	
+};

@@ -1,32 +1,53 @@
-import React from 'react'
-import axios from 'axios'
-import Header from '../Header';
-import Main from '../mainBooks';
-import Footer from '../Footer'; 
+import React from 'react';
+import axios from 'axios';
+import BooksGrid from '../BooksGrid';
 
-
-export default class Books extends React.Component { 
-    constructor(props){
+export default class Books extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
-            message: ''
+            search: '',
+            books: []
         }
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    componentDidMount(){
-    axios.get('http://localhost:3000/books').then(res => {
-        console.log(res.data)
+    handleChange(event) {
+        event.preventDefault();
         this.setState({
-            message: res.data
+            search: event.target.value
         })
-    })}
+    }
 
-    render(){
-        return(
-        <div>
-            <Header></Header>
-            <Main></Main>
-            <Footer></Footer>
-        </div>
-    )}
+    handleSubmit(event){
+        event.preventDefault();
+        const {search} = this.state;
+        const url = `http://localhost:3000/api/books/search/${search}`
+        axios.get(url).then(res => {
+            this.setState({books: res.data})  
+        })
+    }
+
+    render() {
+        const {books} = this.state;
+
+        return (
+            <div>
+                <div>
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text" value={this.state.search} onChange={this.handleChange}/>
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+                <div>
+                    {
+                        books.length > 0 && 
+                        <BooksGrid books={books} />
+                    }
+                </div>
+            </div>
+        )
+    }
 }
