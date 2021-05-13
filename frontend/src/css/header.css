@@ -27,13 +27,13 @@
     text-transform: uppercase;
     color: white;
     font-family: "fontAwesome";
-    font-size: 22px; }
+    font-size: 22px; 
+}
     #branding .site-title a {
       color: white; }
   #branding .site-description {
     font-family: "fontAwesome";
     font-size: 17px;
-  
     color: #9198af; }
 
 

@@ -9,7 +9,7 @@ router.get('/books', (req, res) => {
     const options = {
         field: 'title',
         offset: 0,
-        limit: 9,
+        limit: 20,
         type: 'books',
         order: 'relevance',
         lang: 'en'

@@ -23,8 +23,6 @@ class Book extends React.Component {
             maturityR: '',
             pubDate: '',
             rating: ''
-            
-
         }
     }
 
@@ -57,8 +55,6 @@ class Book extends React.Component {
         const maturityR = this.state.maturityR;
         const pubDate= this.state.pubDate;
         const rating= this.state.rating;
-
-
         return (
 
             <main class="main-content">
@@ -69,8 +65,6 @@ class Book extends React.Component {
                                                 ? <img src={img} alt="book-poster" width="300" height="auto"/>
                                                 : <img src={noimage} alt="book-poster" width="300" height="auto"/>
                                             } 
-                                    
-                                        
                                     </div>
                                     <div class="col-md-1">
                                         <h2 class="book-title">{title}</h2>
@@ -105,7 +99,7 @@ class Book extends React.Component {
 
                                             {description != null 
                                                 ? <p><span>Description: {description.replace(/<[^>]+>/g, '')}</span></p>
-                                                : <p><span>Description: None</span></p>
+                                                ? <p><span>Description: {description}</span></p>
                                             } 
     
                                     </div>

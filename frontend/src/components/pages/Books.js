@@ -107,7 +107,6 @@ export default class Books extends React.Component {
                                         </form>
                                     </div>
                                 </div>
-
                                 <div class="wrapper">
                                     {
                                         books.length > 0 && 
