@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {withRouter} from 'react-router';
 import '../../css/book.css';
+import noimage from '../../dummy/noimage.jpg'
 
 async function fetchBook(id) {
     const url = `http://localhost:3000/api/books/lookup/${id}`;
@@ -14,7 +15,15 @@ class Book extends React.Component {
         super(props);
         this.state = {
             book: {},
-            img: ''
+            img: '',
+            lang: '',
+            author: '',
+            category: {},
+            description: '',
+            maturityR: '',
+            pubDate: ''
+            
+
         }
     }
 
@@ -24,7 +33,13 @@ class Book extends React.Component {
         res.then(book => {
             this.setState({
                 book: book,
-                img: book.images.small,
+                img: book.thumbnail,
+                lang: book.language,
+                author:  book.authors,
+                category:  book.categories,
+                description:  book.description,
+                maturityR:  book.maturityRating,
+                pubDate: book.publishedDate
             })
             console.log(book)
         })
@@ -33,15 +48,63 @@ class Book extends React.Component {
     render() {
         const {title} = this.state.book;
         const img = this.state.img;
+        const lang = this.state.lang;
+        const author = this.state.author;
+        const category = this.state.category;
+        const description = this.state.description;
+        const maturityR = this.state.maturityR;
+        const pubDate= this.state.pubDate;
+
+
         return (
-            <div className="book-wrapper">
-                <div className="book-box book-title">
-                    {title}
-                </div>
-                <div className="book-box book-img">
-                    <img src={img} alt={title} width="400" height="400"/>
-                </div>
-            </div>
+
+            <main class="main-content">
+				<div class="container">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                            {img != null 
+                                                ? <img src={img} alt="book-poster" width="300" height="auto"/>
+                                                : <img src={noimage} alt="book-poster" width="300" height="auto"/>
+                                            } 
+                                        
+                                    </div>
+                                    <div class="col-md-1">
+                                        <h2 class="book-title">{title}</h2>
+                                            {author != null 
+                                                ? <p><span>Author: {author}</span></p>
+                                                : <p><span>Author: Unknown</span></p>
+                                            } 
+                                            {category != null 
+                                                ? <p><span>Category: {category[1]}</span></p>
+                                                : <p><span>Category: Not specified </span></p>
+                                            } 
+
+                                            {pubDate != null 
+                                                ? <p><span>Publishing Date: {pubDate}</span></p>
+                                                : <p><span>Publishing Date: Unknown</span></p>
+                                            } 
+
+                                            {lang != null 
+                                                ? <p><span>Language: {lang}</span></p>
+                                                : <p><span>Language: Unknown</span></p>
+                                            } 
+
+                                            {maturityR != null 
+                                                ? <p><span>Maturity Rating: {maturityR}</span></p>
+                                                : <p><span>Maturity Rating: Unknown</span></p>
+                                            } 
+
+                                            {description != null 
+                                                ? <p><span>Description: {description}</span></p>
+                                                : <p><span>Description: None</span></p>
+                                            } 
+    
+                                    </div>
+							    </div>
+				</div> 
+			</main>
+
+            
         )
     }
 }

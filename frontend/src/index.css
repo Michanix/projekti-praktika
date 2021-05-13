@@ -38,7 +38,7 @@ template {
 }
 
 html {
-  background: #fff;
+  background: rgb(87, 72, 255);
   color: #000;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -53,6 +53,7 @@ textarea {
 }
 
 body {
+  background-image: url(dummy/background.jpg);
   margin: 0;
 }
 
@@ -66,6 +67,8 @@ a:hover,
 a:active {
   outline: 0;
 }
+
+
 
 h1 {
   font-size: 2em;
@@ -741,6 +744,8 @@ ul.arrow li a:hover {
   overflow: hidden;
   height: 0;
 }
+
+
 
 .row {
   margin-left: -15px;
@@ -2117,11 +2122,7 @@ ul.arrow li a:hover {
   color: #ffaa3c;
 }
 
-.main-content .container {
-  background: white;
-  border-radius: 5px;
-  padding: 30px;
-}
+
 
 .section-title {
   font-size: 30px;
