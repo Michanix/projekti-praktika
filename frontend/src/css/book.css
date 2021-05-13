@@ -7,6 +7,7 @@
   max-width: 100%; }
 .page .book-title {
   font-size: 25px;
+  font-family: "fontAwesome";
   font-weight: 300; }
 
 .bookthumbnail{
@@ -101,7 +102,8 @@
 
 
 .filters {
-  margin-bottom: 50px; }
+  margin-bottom: 0px;
+   }
   .filters select {
     -webkit-appearance: none;
     -moz-appearance: none;

@@ -16,6 +16,8 @@ export default function About() {
 							<a href="/">Home</a>
 							<span>About us</span>
 						</div>
+
+                        <h2 class="page-title">Our Team</h2>
                     <div class="row">
 
                     <div class="col-md-3">

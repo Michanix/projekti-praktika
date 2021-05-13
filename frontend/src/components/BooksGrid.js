@@ -17,7 +17,6 @@ export default function BooksGrid(props) {
                             : <img src={noimage} alt="" width="200" height="300" />
                         } 
                     
-                    {/*<img src={book.thumbnail} alt="" width="200" height="300" />*/}
                 </Link>
                 <div class="desc">
                     <small class="book-title">{book.title} </small>

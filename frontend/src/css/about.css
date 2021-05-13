@@ -7,7 +7,7 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
   color: #84878d;
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: cursive;
   font-size: 15px;
   font-weight: 400;
   line-height: normal;
@@ -67,7 +67,7 @@ body {
 
   .breadcrumbs {
     text-align: center;
-    font-family: "FontAwesome";
+    font-family: "fontAwesome";
     font-size: 22px;
     align-self: center;
     padding-bottom: 20px;

@@ -26,12 +26,14 @@
     margin: 0;
     text-transform: uppercase;
     color: white;
+    font-family: "fontAwesome";
     font-size: 22px; }
     #branding .site-title a {
       color: white; }
   #branding .site-description {
-    font-size: 13px;
-    font-size: 0.8666666667em;
+    font-family: "fontAwesome";
+    font-size: 17px;
+  
     color: #9198af; }
 
 
@@ -71,11 +73,11 @@
     display: inline-block;
     padding: 10px 0; }
     .main-navigation .menu-item a {
-      padding: 0 15px;
+      padding: 11px 15px 15px;
       display: inline-block;
       color: #84878d;
-      font-size: 14px;
-      font-size: 0.9333333333em;
+      font-size: 16px;
+      font-family: "fontAwesome";
       font-weight: 400;
       line-height: 1;
       border-right: 1px solid #eeeeef; }

@@ -21,7 +21,8 @@ class Book extends React.Component {
             category: {},
             description: '',
             maturityR: '',
-            pubDate: ''
+            pubDate: '',
+            rating: ''
             
 
         }
@@ -39,7 +40,8 @@ class Book extends React.Component {
                 category:  book.categories,
                 description:  book.description,
                 maturityR:  book.maturityRating,
-                pubDate: book.publishedDate
+                pubDate: book.publishedDate,
+                rating: book.averageRating
             })
             console.log(book)
         })
@@ -54,6 +56,7 @@ class Book extends React.Component {
         const description = this.state.description;
         const maturityR = this.state.maturityR;
         const pubDate= this.state.pubDate;
+        const rating= this.state.rating;
 
 
         return (
@@ -66,6 +69,7 @@ class Book extends React.Component {
                                                 ? <img src={img} alt="book-poster" width="300" height="auto"/>
                                                 : <img src={noimage} alt="book-poster" width="300" height="auto"/>
                                             } 
+                                    
                                         
                                     </div>
                                     <div class="col-md-1">
@@ -87,15 +91,20 @@ class Book extends React.Component {
                                             {lang != null 
                                                 ? <p><span>Language: {lang}</span></p>
                                                 : <p><span>Language: Unknown</span></p>
+                                            }
+
+                                            {rating != null 
+                                                ? <p><span>Rating: {rating}</span></p>
+                                                : <p><span>Rating: not available</span></p>
                                             } 
 
                                             {maturityR != null 
-                                                ? <p><span>Maturity Rating: {maturityR}</span></p>
+                                                ? <p><span>Maturity Rating: {maturityR.toLowerCase()}</span></p>
                                                 : <p><span>Maturity Rating: Unknown</span></p>
                                             } 
 
                                             {description != null 
-                                                ? <p><span>Description: {description}</span></p>
+                                                ? <p><span>Description: {description.replace(/<[^>]+>/g, '')}</span></p>
                                                 : <p><span>Description: None</span></p>
                                             } 
     

@@ -73,32 +73,40 @@ export default class Books extends React.Component {
                     <div class="container">
                                 <div class="breadcrumbs">
                                     <a href="/">Home</a>
-                                    <span>About us</span>
+                                    <span>Books</span>
 						        </div>
-        
-                                    <form onSubmit={this.handleCategorySubmit}>
-                                        <div class="filters">
-                                            <select name="#" id="categories" placeholder="Choose Category"   onChange={this.handleCategoryChange}>
-                                                <option value="Action">Action</option>
-                                                <option value="Computers">Computers</option>
-                                                <option value="Drama">Drama</option>
-                                                <option value="Fantasy">Fantasy</option>
-                                                <option value="Horror">Horror</option>
-                                                <option value="Adventure">Adventure</option>
-                                            </select>
 
-                                            <input type="submit" value="Search" />
-                                        
-                                        </div>
-                                    </form>
+                                <h2 class="page-title">Search for any book OR  choose a category for random preview:</h2>
+                                <div class="row">
 
-                                    <div>
-                                        <form class="search-form" onSubmit={this.handleSubmit}>
-                                            <input type="text" value={this.state.search} onChange={this.handleChange}/>
-                                            <input type="submit" value="Search" />
-                                                
+                                    <div class="col-md-4">
+
+                                        <form class="search-form" onSubmit={this.handleSubmit}  >
+                                                <input type="text" value={this.state.search} onChange={this.handleChange}/>
+                                                <input type="submit" value="Search" />
+                                                    
                                         </form>
                                     </div>
+                                    <div class="col-md-5">
+        
+                                        <form onSubmit={this.handleCategorySubmit}>
+                                            <div class="filters">
+                                                <select name="#" id="categories" placeholder="Choose Category"   onChange={this.handleCategoryChange}>
+                                                    <option value="">Choose category</option>
+                                                    <option value="Action">Action</option>
+                                                    <option value="Computers">Computers</option>
+                                                    <option value="Drama">Drama</option>
+                                                    <option value="Fantasy">Fantasy</option>
+                                                    <option value="Horror">Horror</option>
+                                                    <option value="Adventure">Adventure</option>
+                                                </select>
+
+                                                <input type="submit" value="Search" />
+                                            
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
 
                                 <div class="wrapper">
                                     {
