@@ -23,6 +23,20 @@ export default class Home extends React.Component {
         const {books} = this.state;
 
         return(
-            <BooksGrid books={books}/>
+
+        <div class="container">
+            <main class="main-content">
+				<div class="container">
+					<div class="page">
+						<div class="row">
+							<div class="col-md-9">
+                            <BooksGrid books={books}/>
+							</div>					
+						</div> 
+					</div>
+				</div> 
+			</main>
+        </div>
+            
     )}
 }
