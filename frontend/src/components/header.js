@@ -3,10 +3,10 @@ import '../css/header.css';
 import {Link} from "react-router-dom";
 
 export default function Header() {
-    return(
+    return (
 		<header class="site-header">
 			<div class="container">
-			`<ul>
+			<ul>
 					<a href="/"  id="branding"> 
 					<img src="images/logo2.png" alt="" class="logo"/>
 					<div class="logo-copy">
@@ -30,11 +30,7 @@ export default function Header() {
 							<Link to="/books">Books</Link>
 						</li>
 					</ul>
-
-					
 				</div>
-
-				<div class="mobile-navigation"></div>
 			</ul>
 		  </div>
 		</header>

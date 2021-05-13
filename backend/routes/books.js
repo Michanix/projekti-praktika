@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 const books = require('google-books-search');
 
-var randomWords = require('random-words');
+const randomWords = require('random-words');
 
 router.get('/books', (req, res) => {
     const options = {

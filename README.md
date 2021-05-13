@@ -1,6 +1,6 @@
 # Books recommendation and search website
 
 This repository will be used by our team for development of books
-search and recommendation system.
+search website.
 
-## To be continue...
+The website is basically a client for Google Books API with limited capabilities.

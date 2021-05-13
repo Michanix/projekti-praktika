@@ -11,7 +11,6 @@ export default function BooksGrid(props) {
         return (
             <div class="box">
                 <Link to={link}>
-
                         {book.thumbnail != null 
                             ? <img src={book.thumbnail} alt="book-poster" width="200" height="300" />
                             : <img src={noimage} alt="" width="200" height="300" />
@@ -25,10 +24,8 @@ export default function BooksGrid(props) {
     });
 
     return (
-        
         <div class="wrapper">
             {renderBooks}
         </div>
-
     );
 }

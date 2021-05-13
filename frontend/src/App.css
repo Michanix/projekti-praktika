@@ -20,19 +20,6 @@
   color: rgb(63, 11, 11);
 }
 
-
-
-html,
-body {
-  background-image: url(./dummy/background.jpg);
-  background-repeat: repeat;
-  color: #84878d;
-  font-family: "Roboto", "Open Sans", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: normal; 
-}
-
 .content {
   grid-area: content;
 
