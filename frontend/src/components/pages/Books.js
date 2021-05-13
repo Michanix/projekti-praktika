@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import BooksGrid from '../BooksGrid';
 
-
 export default class Books extends React.Component {
     constructor(props) {
         super(props);
@@ -33,8 +32,6 @@ export default class Books extends React.Component {
         })
     }
 
-
-
     handleCategorySubmit(event) {
         event.preventDefault();
         const {category} = this.state;
@@ -54,15 +51,6 @@ export default class Books extends React.Component {
             this.setState({books: res.data})
         })
     }
-/*
-    componentDidMount() {
-        axios.get('http://localhost:3000/api/books/')
-        .then(res => {
-            this.setState({
-                books: res.data
-            })
-        })
-    }  */
 
     render() {
         const {books} = this.state;
@@ -71,42 +59,49 @@ export default class Books extends React.Component {
             <div class="container">
                 <main class="main-content"> 
                     <div class="container">
-                                <div class="breadcrumbs">
-                                    <a href="/">Home</a>
-                                    <span>About us</span>
-						        </div>
-        
-                                    <form onSubmit={this.handleCategorySubmit}>
-                                        <div class="filters">
-                                            <select name="#" id="categories" placeholder="Choose Category"   onChange={this.handleCategoryChange}>
-                                                <option value="Action">Action</option>
-                                                <option value="Computers">Computers</option>
-                                                <option value="Drama">Drama</option>
-                                                <option value="Fantasy">Fantasy</option>
-                                                <option value="Horror">Horror</option>
-                                                <option value="Adventure">Adventure</option>
-                                            </select>
+                        <div class="breadcrumbs">
+                            <a href="/">Home</a>
+                            <span>Books</span>
+                        </div>
 
-                                            <input type="submit" value="Search" />
-                                        
-                                        </div>
-                                    </form>
+                        <h2 class="page-title">Search for any book OR  choose a category for random preview:</h2>
+                        <div class="row">
 
-                                    <div>
-                                        <form class="search-form" onSubmit={this.handleSubmit}>
-                                            <input type="text" value={this.state.search} onChange={this.handleChange}/>
-                                            <input type="submit" value="Search" />
-                                                
-                                        </form>
+                            <div class="col-md-4">
+
+                                <form class="search-form" onSubmit={this.handleSubmit}  >
+                                        <input type="text" value={this.state.search} onChange={this.handleChange}/>
+                                        <input type="submit" value="Search" />
+                                            
+                                </form>
+                            </div>
+                            <div class="col-md-5">
+
+                                <form onSubmit={this.handleCategorySubmit}>
+                                    <div class="filters">
+                                        <select name="#" id="categories" placeholder="Choose Category"   onChange={this.handleCategoryChange}>
+                                            <option value="">Choose category</option>
+                                            <option value="Action">Action</option>
+                                            <option value="Computers">Computers</option>
+                                            <option value="Drama">Drama</option>
+                                            <option value="Fantasy">Fantasy</option>
+                                            <option value="Horror">Horror</option>
+                                            <option value="Adventure">Adventure</option>
+                                        </select>
+
+                                        <input type="submit" value="Search" />
+                                    
                                     </div>
-
-                                <div class="wrapper">
-                                    {
-                                        books.length > 0 && 
-                                        <BooksGrid books={books} />
-                                    }
-                                </div>
-                        </div> 
+                                </form>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            {
+                                books.length > 0 && 
+                                <BooksGrid books={books} />
+                            }
+                        </div>
+                    </div> 
                 </main>
             </div>
         )

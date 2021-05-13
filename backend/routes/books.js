@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 const books = require('google-books-search');
 
-var randomWords = require('random-words');
+const randomWords = require('random-words');
 
 router.get('/books', (req, res) => {
     const options = {
@@ -29,7 +29,7 @@ router.get('/books/search/:value', (req, res) => {
     const options = {
         field: 'title',
         offset: 0,
-        limit: 6,
+        limit: 9,
         type: 'books',
         order: 'relevance',
         lang: 'en'
@@ -49,7 +49,7 @@ router.get('/books/lookup/:value', (req, res) => {
     const options = {
         field: 'subject',
         offset: 0,
-        limit: 6,
+        limit: 9,
         type: 'books',
         order: 'relevance',
         lang: 'en'
@@ -69,7 +69,7 @@ router.get('/books/subject/:category/', (req, res) => {
     var options = {
         field: 'subject',
         offset: 0,
-        limit: 6,
+        limit: 9,
         type: 'books',
         order: 'relevance',
         lang: 'en'
